@@ -17,5 +17,12 @@ function files() {
   return element;
 }
 
+function getRange() {
+  const element = document.createElement('div');
+  element.innerHTML = '<mgt-get resource="/me/drive/items/E811A422CA0F0D69!899/workbook/tables/Sheet1/range" scopes="mail.read"></mgt-get>'
+  return element;
+}
+
 document.getElementById("login").appendChild((login()));
 document.getElementById("files").appendChild((files()));
+document.getElementById("range").appendChild((getRange()));
